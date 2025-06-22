@@ -18,10 +18,10 @@ export const heroNews: NewsArticle = {
   content:
     'In a historic moment that could reshape the future of our planet, world leaders gathered at the Global Climate Summit have reached a groundbreaking agreement on carbon emissions reduction. The landmark deal, which was finalized after intense negotiations spanning three days, commits participating nations to reduce their carbon emissions by 50% by the year 2030.\n\nThis unprecedented agreement represents the most ambitious climate action plan ever adopted on a global scale. Environmental experts have hailed this as a "turning point" in humanity\'s response to the climate crisis, while economists predict it will spur innovation in renewable energy technologies and create millions of new jobs in the green economy.\n\nThe agreement includes comprehensive measures for monitoring and enforcement, with regular progress reviews every two years. Developing nations will receive financial and technological support to help them meet these ambitious targets while continuing their economic development.',
   author: "Sarah Johnson",
-  publishedAt: "2025-01-22T08:30:00Z",
+  publishedAt: "2025-06-22T08:30:00Z",
   category: "WORLD",
   imageUrl:
-    "https://images.unsplash.com/photo-1569163139394-de4e8566672e?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&h=600&fit=crop&auto=format",
   readTime: "5 min read",
 };
 
