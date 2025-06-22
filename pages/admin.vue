@@ -181,6 +181,179 @@
       </div>
     </div>
 
+    <div v-if="showEditModal" class="modal modal-open">
+      <div class="modal-box max-w-4xl">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold">Edit Article</h3>
+          <button
+            type="button"
+            @click="closeEditModal"
+            class="btn btn-ghost btn-sm"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="lg:col-span-2">
+            <label class="label">
+              <span class="label-text font-medium">Title</span>
+            </label>
+            <input
+              v-model="editingArticle!.title"
+              type="text"
+              placeholder="Article title"
+              class="input input-bordered w-full"
+            />
+          </div>
+
+          <div class="lg:col-span-2">
+            <label class="label">
+              <span class="label-text font-medium">Excerpt</span>
+            </label>
+            <textarea
+              v-model="editingArticle!.excerpt"
+              placeholder="Article excerpt"
+              rows="3"
+              class="textarea textarea-bordered w-full"
+            ></textarea>
+          </div>
+
+          <div class="lg:col-span-2">
+            <label class="label">
+              <span class="label-text font-medium">Content</span>
+            </label>
+            <textarea
+              v-model="editingArticle!.content"
+              placeholder="Article content"
+              rows="6"
+              class="textarea textarea-bordered w-full"
+            ></textarea>
+          </div>
+
+          <div>
+            <label class="label">
+              <span class="label-text font-medium">Author</span>
+            </label>
+            <input
+              v-model="editingArticle!.author"
+              type="text"
+              placeholder="Author name"
+              class="input input-bordered w-full"
+            />
+          </div>
+
+          <div>
+            <label class="label">
+              <span class="label-text font-medium">Category</span>
+            </label>
+            <select
+              v-model="editingArticle!.category"
+              class="select select-bordered w-full"
+            >
+              <option value="WORLD">WORLD</option>
+              <option value="POLITICS">POLITICS</option>
+              <option value="BUSINESS">BUSINESS</option>
+              <option value="TECHNOLOGY">TECHNOLOGY</option>
+              <option value="SPORTS">SPORTS</option>
+              <option value="CULTURE">CULTURE</option>
+              <option value="OPINION">OPINION</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="label">
+              <span class="label-text font-medium">Read Time</span>
+            </label>
+            <input
+              v-model="editingArticle!.readTime"
+              type="text"
+              placeholder="e.g., 5 min read"
+              class="input input-bordered w-full"
+            />
+          </div>
+
+          <div>
+            <label class="label">
+              <span class="label-text font-medium">Image URL</span>
+            </label>
+            <input
+              v-model="editingArticle!.imageUrl"
+              type="text"
+              placeholder="Image URL"
+              class="input input-bordered w-full"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-2 mt-6">
+          <button
+            type="button"
+            @click="handleUpdateArticle"
+            class="btn btn-success"
+          >
+            <svg
+              class="w-4 h-4 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              ></path>
+            </svg>
+            Update Article
+          </button>
+          <button type="button" @click="closeEditModal" class="btn btn-outline">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="showDeleteModal" class="modal modal-open">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg mb-4">Confirm Delete</h3>
+        <p class="py-4">
+          Are you sure you want to delete "<strong>{{
+            articleToDelete?.title
+          }}</strong
+          >"? This action cannot be undone.
+        </p>
+        <div class="modal-action">
+          <button
+            type="button"
+            @click="handleDeleteArticle"
+            class="btn btn-error"
+          >
+            Delete
+          </button>
+          <button
+            type="button"
+            @click="closeDeleteModal"
+            class="btn btn-outline"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <article
         v-for="story in allArticles"
@@ -223,7 +396,11 @@
           </div>
 
           <div class="flex gap-2 pt-3 border-t border-base-300">
-            <button type="button" class="btn btn-outline btn-sm flex-1">
+            <button
+              type="button"
+              @click="openEditModal(story)"
+              class="btn btn-outline btn-sm flex-1"
+            >
               <svg
                 class="w-4 h-4 mr-2"
                 fill="none"
@@ -241,6 +418,7 @@
             </button>
             <button
               type="button"
+              @click="openDeleteModal(story)"
               class="btn btn-outline btn-sm text-error hover:text-error-content hover:bg-error"
             >
               <svg
@@ -279,9 +457,14 @@ import type { NewsArticle } from "~/data/news";
 import { formatDate } from "~/utils/dateFormatter";
 import { useNews } from "~/composables/useNews";
 
-const { getAllArticles, addArticle } = useNews();
+const { getAllArticles, addArticle, updateArticle, deleteArticle } = useNews();
 
 const showAddForm = ref(false);
+const showEditModal = ref(false);
+const showDeleteModal = ref(false);
+const editingArticle = ref<NewsArticle | null>(null);
+const articleToDelete = ref<NewsArticle | null>(null);
+
 const newArticle = ref<Omit<NewsArticle, "id" | "publishedAt">>({
   title: "",
   excerpt: "",
@@ -297,6 +480,26 @@ const allArticles = computed(() => getAllArticles());
 const closeAddForm = () => {
   showAddForm.value = false;
   resetForm();
+};
+
+const closeEditModal = () => {
+  showEditModal.value = false;
+  editingArticle.value = null;
+};
+
+const closeDeleteModal = () => {
+  showDeleteModal.value = false;
+  articleToDelete.value = null;
+};
+
+const openEditModal = (article: NewsArticle) => {
+  editingArticle.value = { ...article };
+  showEditModal.value = true;
+};
+
+const openDeleteModal = (article: NewsArticle) => {
+  articleToDelete.value = article;
+  showDeleteModal.value = true;
 };
 
 const resetForm = () => {
@@ -329,5 +532,30 @@ const handleAddArticle = () => {
 
   addArticle(articleToAdd);
   closeAddForm();
+};
+
+const handleUpdateArticle = () => {
+  if (
+    !editingArticle.value?.title ||
+    !editingArticle.value?.excerpt ||
+    !editingArticle.value?.content ||
+    !editingArticle.value?.author
+  ) {
+    alert("Please fill in all required fields");
+    return;
+  }
+
+  if (editingArticle.value) {
+    const { id, ...updateData } = editingArticle.value;
+    updateArticle(id, updateData);
+    closeEditModal();
+  }
+};
+
+const handleDeleteArticle = () => {
+  if (articleToDelete.value) {
+    deleteArticle(articleToDelete.value.id);
+    closeDeleteModal();
+  }
 };
 </script>

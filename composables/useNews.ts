@@ -35,7 +35,6 @@ export const useNews = () => {
   const more = useState<NewsArticle[]>("more-stories", () => [...moreStories]);
   const hero = useState<NewsArticle | null>("hero-news", () => heroNews);
 
-  // Get articles by category
   const getArticlesByCategory = (category: string): NewsArticle[] => {
     switch (category.toLowerCase()) {
       case "politics":
@@ -57,7 +56,6 @@ export const useNews = () => {
     }
   };
 
-  // Get all articles for admin page
   const getAllArticles = (): NewsArticle[] => {
     return [
       hero.value,
@@ -73,14 +71,12 @@ export const useNews = () => {
     ].filter(Boolean) as NewsArticle[];
   };
 
-  // Add new article
   const addArticle = (article: Omit<NewsArticle, "id">) => {
     const newArticle: NewsArticle = {
       ...article,
       id: `new-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
     };
 
-    // Add to the appropriate category
     switch (article.category.toLowerCase()) {
       case "politics":
         politics.value.push(newArticle);
@@ -106,6 +102,67 @@ export const useNews = () => {
     }
   };
 
+  const updateArticle = (id: string, updatedArticle: Partial<NewsArticle>) => {
+    const updateInCategory = (categoryArray: Ref<NewsArticle[]>) => {
+      const index = categoryArray.value.findIndex(
+        (article) => article.id === id
+      );
+      if (index !== -1) {
+        categoryArray.value[index] = {
+          ...categoryArray.value[index],
+          ...updatedArticle,
+        };
+        return true;
+      }
+      return false;
+    };
+
+    if (updateInCategory(politics)) return;
+    if (updateInCategory(world)) return;
+    if (updateInCategory(business)) return;
+    if (updateInCategory(technology)) return;
+    if (updateInCategory(sports)) return;
+    if (updateInCategory(culture)) return;
+    if (updateInCategory(opinion)) return;
+
+    if (hero.value?.id === id) {
+      hero.value = { ...hero.value, ...updatedArticle };
+      return;
+    }
+
+    if (updateInCategory(latest)) return;
+    if (updateInCategory(more)) return;
+  };
+
+  const deleteArticle = (id: string) => {
+    const deleteFromCategory = (categoryArray: Ref<NewsArticle[]>) => {
+      const index = categoryArray.value.findIndex(
+        (article) => article.id === id
+      );
+      if (index !== -1) {
+        categoryArray.value.splice(index, 1);
+        return true;
+      }
+      return false;
+    };
+
+    if (deleteFromCategory(politics)) return;
+    if (deleteFromCategory(world)) return;
+    if (deleteFromCategory(business)) return;
+    if (deleteFromCategory(technology)) return;
+    if (deleteFromCategory(sports)) return;
+    if (deleteFromCategory(culture)) return;
+    if (deleteFromCategory(opinion)) return;
+
+    if (hero.value?.id === id) {
+      hero.value = null;
+      return;
+    }
+
+    if (deleteFromCategory(latest)) return;
+    if (deleteFromCategory(more)) return;
+  };
+
   return {
     // Individual category getters
     politics,
@@ -123,5 +180,7 @@ export const useNews = () => {
     getArticlesByCategory,
     getAllArticles,
     addArticle,
+    updateArticle,
+    deleteArticle,
   };
 };
