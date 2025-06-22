@@ -85,6 +85,7 @@
                     <span class="label-text">Email</span>
                   </label>
                   <input
+                    v-model="email"
                     type="email"
                     placeholder="hello@example.com"
                     class="input input-bordered w-full"
@@ -95,6 +96,7 @@
                     <span class="label-text">Password</span>
                   </label>
                   <input
+                    v-model="password"
                     type="password"
                     placeholder="••••••••"
                     class="input input-bordered w-full"
@@ -142,11 +144,23 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+
 definePageMeta({
   layout: "blank",
 });
 
+const { login } = useAuth();
+const router = useRouter();
+const email = ref("");
+const password = ref("");
+
 const handleLogin = () => {
-  alert("Login functionality not implemented yet.");
+  if (email.value) {
+    login(email.value);
+    router.push("/");
+  } else {
+    alert("Please enter an email.");
+  }
 };
 </script>
