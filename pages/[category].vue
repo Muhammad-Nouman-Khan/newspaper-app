@@ -1,7 +1,7 @@
 <template>
   <main class="container mx-auto px-6 py-12">
     <h1
-      class="text-4xl font-bold heading mb-8 capitalize border-b-2 border-primary pb-2"
+      class="text-4xl font-bold heading mb-8 capitalize border-b-2 border-primary pb-2 heading"
     >
       {{ category }}
     </h1>
@@ -33,7 +33,7 @@
 
         <div class="p-6 space-y-4">
           <h3
-            class="text-xl font-bold text-base-content leading-tight group-hover:text-primary transition-colors duration-200"
+            class="text-xl font-bold text-base-content leading-tight group-hover:text-primary transition-colors duration-200 heading"
           >
             {{ story.title }}
           </h3>
