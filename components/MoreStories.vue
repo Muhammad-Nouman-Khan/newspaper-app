@@ -27,12 +27,12 @@
 
         <div class="p-6 space-y-4">
           <h3
-            class="text-xl font-bold text-base-content leading-tight group-hover:text-primary transition-colors duration-200 line-clamp-2"
+            class="text-xl font-bold text-base-content leading-tight group-hover:text-primary transition-colors duration-200"
           >
             {{ story.title }}
           </h3>
 
-          <p class="text-base-content/70 leading-relaxed line-clamp-3">
+          <p class="text-base-content/70 leading-relaxed">
             {{ story.excerpt }}
           </p>
 
@@ -54,37 +54,5 @@
 
 <script setup lang="ts">
 import { moreStories } from "~/data/news";
-
-const formatDate = (dateString: string) => {
-  const date = new Date(dateString);
-  const now = new Date();
-  const diffInHours = Math.floor(
-    (now.getTime() - date.getTime()) / (1000 * 60 * 60)
-  );
-
-  if (diffInHours < 1) {
-    return "Just now";
-  } else if (diffInHours < 24) {
-    return `${diffInHours}h ago`;
-  } else {
-    const diffInDays = Math.floor(diffInHours / 24);
-    return `${diffInDays}d ago`;
-  }
-};
+import { formatDate } from "~/utils/dateFormatter";
 </script>
-
-<style scoped>
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-</style>
