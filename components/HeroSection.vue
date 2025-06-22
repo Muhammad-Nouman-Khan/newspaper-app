@@ -5,6 +5,7 @@
       <div class="lg:col-span-2">
         <article
           class="group cursor-pointer bg-base-100 rounded-xl shadow-lg border border-base-300 overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          @click="openDialog(heroNews)"
         >
           <div class="relative overflow-hidden rounded-lg mb-4">
             <img
@@ -64,6 +65,7 @@
               v-for="news in latestNews"
               :key="news.id"
               class="group cursor-pointer bg-base-200 rounded-lg p-4 hover:bg-base-300 transition-colors duration-200 border border-base-300 hover:shadow-md"
+              @click="openDialog(news)"
             >
               <div class="flex space-x-4">
                 <div class="flex-shrink-0">
@@ -105,12 +107,21 @@
         </div>
       </div>
     </div>
+    <NewsDialog :news="selectedNews" @close="selectedNews = null" />
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import { heroNews, latestNews } from "~/data/news";
 import { formatDate } from "~/utils/dateFormatter";
+import NewsDialog from "./NewsDialog.vue";
+import type { NewsArticle } from "~/data/news";
+
+const selectedNews = ref<NewsArticle | null>(null);
+const openDialog = (news: NewsArticle) => {
+  selectedNews.value = news;
+};
 </script>
 
 <style scoped>
