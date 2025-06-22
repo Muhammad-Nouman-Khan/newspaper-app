@@ -97,7 +97,7 @@
     <div
       class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500"
     >
-      <div class="mb-2 md:mb-0">© 2024 NuxtNews. All rights reserved.</div>
+      <div class="mb-2 md:mb-0">© 2025 NuxtNews. All rights reserved.</div>
       <div class="flex space-x-4">
         <a href="#" class="hover:text-blue-400">Privacy Policy</a>
         <a href="#" class="hover:text-blue-400">Terms of Service</a>

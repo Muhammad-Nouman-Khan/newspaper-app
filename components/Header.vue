@@ -5,7 +5,7 @@
         <div class="flex items-center justify-between">
           <div class="flex items-center">
             <Icon name="uil:calendar" class="mr-2" />
-            <span>6/22/2025</span>
+            <span>{{ currentDate }}</span>
           </div>
           <div class="flex items-center gap-3">
             <span>New York, NY • 72°F</span>
@@ -334,4 +334,6 @@ const handleMobileLogout = () => {
   logout();
   closeMobileMenu();
 };
+
+const currentDate = new Date().toLocaleDateString();
 </script>
