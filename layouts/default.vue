@@ -1,13 +1,10 @@
 <template>
-  <div class="min-h-screen" data-theme="light">
+  <div data-theme="light">
     <Header />
     <main>
-      <HeroSection />
-      <div class="bg-base-200">
-        <MoreStories />
-      </div>
-      <slot />
+      <NuxtPage />
     </main>
     <Footer />
   </div>
 </template>
+<script setup lang="ts"></script>

@@ -228,3 +228,576 @@ export const moreStories: NewsArticle[] = [
     readTime: "4 min read",
   },
 ];
+
+export const politicsNews: NewsArticle[] = [
+  {
+    id: "more-1",
+    title: "Senate Approves Comprehensive Healthcare Reform Package",
+    excerpt:
+      "Bipartisan legislation aims to expand coverage and reduce prescription drug costs for millions of Americans.",
+    content:
+      "The Senate has passed a landmark healthcare reform package that represents the most significant changes to the American healthcare system in over a decade...",
+    author: "Elizabeth Washington",
+    publishedAt: "2025-01-21T22:15:00Z",
+    category: "POLITICS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "politics-1",
+    title:
+      "New Polling Data Shows Shifting Voter Priorities Ahead of Elections",
+    excerpt:
+      "Recent surveys indicate a significant shift in what voters care about most, with the economy and climate change now topping the list.",
+    content: "...",
+    author: "John Doe",
+    publishedAt: "2025-06-20T10:00:00Z",
+    category: "POLITICS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1560518883-ce09059ee41a?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "politics-2",
+    title: "Global Leaders Convene for Climate Action Summit",
+    excerpt:
+      "Leaders from 150 nations are meeting to negotiate new treaties aimed at curbing global warming.",
+    content: "...",
+    author: "Samantha Bee",
+    publishedAt: "2025-06-20T11:00:00Z",
+    category: "POLITICS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1504966981333-1ac8809be1cf?w=600&h=400&fit=crop",
+    readTime: "5 min read",
+  },
+  {
+    id: "politics-3",
+    title: "Infrastructure Bill Faces Key Vote in Parliament",
+    excerpt:
+      "A multi-trillion dollar infrastructure bill is up for a crucial vote that could define the government's legacy.",
+    content: "...",
+    author: "Robert Downy",
+    publishedAt: "2025-06-19T15:00:00Z",
+    category: "POLITICS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1529107386315-e4214f52f744?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "politics-4",
+    title: "Campaign Finance Reform Passes with Unanimous Vote",
+    excerpt:
+      "A new bill aimed at increasing transparency in political donations has passed with surprising bipartisan support.",
+    content: "...",
+    author: "Chris Evans",
+    publishedAt: "2025-06-18T18:00:00Z",
+    category: "POLITICS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1541876388-3a8342881387?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "politics-5",
+    title: "Diplomatic Talks Stall Between Rival Nations",
+    excerpt:
+      "Hopes for a peaceful resolution have dimmed as the latest round of diplomatic negotiations ended without an agreement.",
+    content: "...",
+    author: "Scarlett Johan",
+    publishedAt: "2025-06-17T12:30:00Z",
+    category: "POLITICS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1587937332529-21f41584a2a1?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "politics-6",
+    title: "Government Announces New Digital Privacy Protections",
+    excerpt:
+      "A new set of regulations aims to give citizens more control over their personal data online.",
+    content: "...",
+    author: "Mark Ruff",
+    publishedAt: "2025-06-16T10:00:00Z",
+    category: "POLITICS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+];
+
+export const worldNews: NewsArticle[] = [
+  {
+    id: "more-2",
+    title:
+      "International Space Station Celebrates 25 Years of Scientific Discovery",
+    excerpt:
+      "Milestone anniversary marks decades of groundbreaking research and international cooperation in space exploration.",
+    content:
+      "The International Space Station (ISS) is celebrating its 25th anniversary...",
+    author: "Dr. James Chen",
+    publishedAt: "2025-01-21T21:30:00Z",
+    category: "WORLD",
+    imageUrl:
+      "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&h=400&fit=crop",
+    readTime: "5 min read",
+  },
+  {
+    id: "world-1",
+    title: "Developing Nations Form New Alliance to Combat Deforestation",
+    excerpt:
+      "A coalition of 15 developing countries has announced a joint initiative to halt deforestation and restore vital ecosystems.",
+    content: "...",
+    author: "Maria Rodriguez",
+    publishedAt: "2025-06-19T14:30:00Z",
+    category: "WORLD",
+    imageUrl:
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "world-2",
+    title: "Humanitarian Crisis Worsens in War-Torn Region",
+    excerpt:
+      "International aid organizations are calling for urgent assistance as a humanitarian crisis deepens.",
+    content: "...",
+    author: "Angela Bassett",
+    publishedAt: "2025-06-20T16:00:00Z",
+    category: "WORLD",
+    imageUrl:
+      "https://images.unsplash.com/photo-1504992963429-56f2d9159b35?w=600&h=400&fit=crop",
+    readTime: "5 min read",
+  },
+  {
+    id: "world-3",
+    title: "Historic Peace Treaty Signed Between Two Nations",
+    excerpt:
+      "After decades of conflict, a historic peace treaty has been signed, bringing hope for lasting stability.",
+    content: "...",
+    author: "Lupita Nyongo",
+    publishedAt: "2025-06-19T18:30:00Z",
+    category: "WORLD",
+    imageUrl:
+      "https://images.unsplash.com/photo-1542037104-91ad68d394b3?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "world-4",
+    title: "New Study Reveals Alarming Rate of Glacier Melt",
+    excerpt:
+      "Satellite data shows that the world's glaciers are melting at an unprecedented rate, posing a threat to coastal communities.",
+    content: "...",
+    author: "Danai Gurira",
+    publishedAt: "2025-06-18T14:00:00Z",
+    category: "WORLD",
+    imageUrl:
+      "https://images.unsplash.com/photo-1581125914199-2a29a2a75431?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "world-5",
+    title: "Global Literacy Rates Reach All-Time High",
+    excerpt:
+      "A new UNESCO report indicates that global literacy rates have reached their highest point in recorded history.",
+    content: "...",
+    author: "Letitia Wright",
+    publishedAt: "2025-06-17T11:45:00Z",
+    category: "WORLD",
+    imageUrl:
+      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "world-6",
+    title: "Archaeologists Discover Ancient City Lost for Millennia",
+    excerpt:
+      "An international team of archaeologists has unearthed the ruins of a sprawling ancient city that was lost to history.",
+    content: "...",
+    author: "Winston Duke",
+    publishedAt: "2025-06-16T09:30:00Z",
+    category: "WORLD",
+    imageUrl:
+      "https://images.unsplash.com/photo-1579273188864-3535a5a1f6a6?w=600&h=400&fit=crop",
+    readTime: "5 min read",
+  },
+];
+
+export const businessNews: NewsArticle[] = [
+  {
+    id: "more-3",
+    title: "Major Bank Announces Revolutionary Digital Banking Platform",
+    excerpt:
+      "New AI-powered system promises to transform personal finance management with predictive analytics and automated savings.",
+    content:
+      "One of the nation's largest banks has unveiled a revolutionary digital banking platform...",
+    author: "Rachel Kim",
+    publishedAt: "2025-01-21T20:45:00Z",
+    category: "BUSINESS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "business-1",
+    title: "Global Supply Chain Disruptions Continue to Impact Tech Sector",
+    excerpt:
+      "Ongoing logistical challenges are causing delays and price increases for consumer electronics and components worldwide.",
+    content: "...",
+    author: "David Smith",
+    publishedAt: "2025-06-18T11:00:00Z",
+    category: "BUSINESS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1578574577315-3f16ce76751b?w=600&h=400&fit=crop",
+    readTime: "5 min read",
+  },
+  {
+    id: "business-2",
+    title: "Start-up Ecosystem Thrives with Record Venture Capital Funding",
+    excerpt:
+      "Venture capital investment in start-ups has reached a new peak this quarter, fueling innovation.",
+    content: "...",
+    author: "Chadwick Bose",
+    publishedAt: "2025-06-20T13:00:00Z",
+    category: "BUSINESS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "business-3",
+    title: "Remote Work Revolutionizes Commercial Real Estate Market",
+    excerpt:
+      "The shift to remote work is forcing a major reassessment of commercial real estate valuations.",
+    content: "...",
+    author: "Michael B Jordan",
+    publishedAt: "2025-06-19T16:30:00Z",
+    category: "BUSINESS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
+    readTime: "5 min read",
+  },
+  {
+    id: "business-4",
+    title: "Cryptocurrency Regulation Framework Proposed by G7 Nations",
+    excerpt:
+      "The G7 has proposed a new regulatory framework aimed at stabilizing the volatile cryptocurrency market.",
+    content: "...",
+    author: "Forest Whitaker",
+    publishedAt: "2025-06-18T12:00:00Z",
+    category: "BUSINESS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1621452298216-54a852363e15?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "business-5",
+    title: "E-commerce Sales Continue to Grow at an Unprecedented Rate",
+    excerpt:
+      "Online retail sales have once again surpassed projections, indicating a permanent shift in consumer behavior.",
+    content: "...",
+    author: "Daniel Kaluuya",
+    publishedAt: "2025-06-17T15:00:00Z",
+    category: "BUSINESS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "business-6",
+    title: "Sustainable Investing Goes Mainstream, Attracting Billions",
+    excerpt:
+      "ESG investing is no longer a niche market, with billions of dollars flowing into sustainable funds.",
+    content: "...",
+    author: "Sterling K Brown",
+    publishedAt: "2025-06-16T11:00:00Z",
+    category: "BUSINESS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+];
+
+export const technologyNews: NewsArticle[] = [
+  {
+    id: "more-4",
+    title: "Quantum Computing Breakthrough Achieves Quantum Supremacy",
+    excerpt:
+      "Scientists solve complex mathematical problem in minutes that would take traditional computers thousands of years.",
+    content:
+      "A team of researchers has achieved a major breakthrough in quantum computing...",
+    author: "Dr. Sarah Zhang",
+    publishedAt: "2025-01-21T19:20:00Z",
+    category: "TECHNOLOGY",
+    imageUrl:
+      "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "tech-1",
+    title: "New AI Model Can Generate Realistic Video from Text Descriptions",
+    excerpt:
+      "A groundbreaking AI has been unveiled that can create high-fidelity video clips from simple text prompts, opening new frontiers in content creation.",
+    content: "...",
+    author: "Alex Williams",
+    publishedAt: "2025-06-17T09:00:00Z",
+    category: "TECHNOLOGY",
+    imageUrl:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "tech-2",
+    title:
+      "Breakthrough in Battery Technology Promises 1000-Mile Range for EVs",
+    excerpt:
+      "A new battery chemistry could eliminate range anxiety for electric vehicle owners.",
+    content: "...",
+    author: "Gwyneth Paltrow",
+    publishedAt: "2025-06-20T14:00:00Z",
+    category: "TECHNOLOGY",
+    imageUrl:
+      "https://images.unsplash.com/photo-1614926857186-a732a35a5525?w=600&h=400&fit=crop",
+    readTime: "5 min read",
+  },
+  {
+    id: "tech-3",
+    title: "5G Adoption Accelerates, Unlocking New Possibilities for IoT",
+    excerpt:
+      "The rollout of 5G networks is happening faster than anticipated, paving the way for a new era of connected devices.",
+    content: "...",
+    author: "Don Cheadle",
+    publishedAt: "2025-06-19T17:00:00Z",
+    category: "TECHNOLOGY",
+    imageUrl:
+      "https://images.unsplash.com/photo-1611003223225-fb3c35485458?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "tech-4",
+    title: "Ethical AI Framework Proposed by Tech Leaders and Academics",
+    excerpt:
+      "A new framework aims to ensure that artificial intelligence is developed and used responsibly.",
+    content: "...",
+    author: "Benedict Cumber",
+    publishedAt: "2025-06-18T13:00:00Z",
+    category: "TECHNOLOGY",
+    imageUrl:
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "tech-5",
+    title: "The Metaverse: Hype vs. Reality for the Future of the Internet",
+    excerpt:
+      "Experts debate the long-term viability and societal impact of the much-hyped metaverse.",
+    content: "...",
+    author: "Zoe Saldana",
+    publishedAt: "2025-06-17T16:00:00Z",
+    category: "TECHNOLOGY",
+    imageUrl:
+      "https://images.unsplash.com/photo-1639762681057-408e52192e56?w=600&h=400&fit=crop",
+    readTime: "5 min read",
+  },
+  {
+    id: "tech-6",
+    title: "Cybersecurity Threats Evolve with AI-Powered Attacks",
+    excerpt:
+      "Security experts are warning of a new wave of sophisticated cybersecurity threats powered by artificial intelligence.",
+    content: "...",
+    author: "Tom Holland",
+    publishedAt: "2025-06-16T14:00:00Z",
+    category: "TECHNOLOGY",
+    imageUrl:
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+];
+
+export const sportsNews: NewsArticle[] = [
+  {
+    id: "more-5",
+    title: "Olympic Athlete Breaks World Record in Stunning Performance",
+    excerpt:
+      "Record-breaking run in the 100-meter dash sets new standard for human athletic achievement.",
+    content:
+      "In a performance that has stunned the sports world, an Olympic athlete has shattered the world record...",
+    author: "Marcus Johnson",
+    publishedAt: "2025-01-21T18:10:00Z",
+    category: "SPORTS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "sports-1",
+    title: "City FC Wins National Championship in Dramatic Penalty Shootout",
+    excerpt:
+      "The final match came down to a tense penalty shootout, where City FC emerged victorious to claim their first title in a decade.",
+    content: "...",
+    author: "Jessica Lee",
+    publishedAt: "2025-06-16T20:00:00Z",
+    category: "SPORTS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1552667466-07770ae110d0?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "sports-2",
+    title: "Underdog Team Completes Miraculous Season with Championship Win",
+    excerpt:
+      "A team that was given 500-to-1 odds at the start of the season has won the championship.",
+    content: "...",
+    author: "Chris Hemsworth",
+    publishedAt: "2025-06-20T21:00:00Z",
+    category: "SPORTS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1543351349-416942735f2f?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "sports-3",
+    title: "eSports Tournament Shatters Viewership Records",
+    excerpt:
+      "The world championship for the popular eSports title attracted more viewers than many traditional sporting events.",
+    content: "...",
+    author: "Tom Hiddleston",
+    publishedAt: "2025-06-19T22:00:00Z",
+    category: "SPORTS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "sports-4",
+    title: "New Analytics Revolutionize How Teams Scout for Talent",
+    excerpt:
+      "Data analytics and AI are changing the game when it comes to identifying and recruiting athletic talent.",
+    content: "...",
+    author: "Anthony Mackie",
+    publishedAt: "2025-06-18T19:30:00Z",
+    category: "SPORTS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1517649763942-7e3c76277c66?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "sports-5",
+    title: "Extreme Sports Athlete Completes Death-Defying Stunt",
+    excerpt:
+      "A renowned extreme sports athlete has successfully completed a stunt that many believed to be impossible.",
+    content: "...",
+    author: "Sebastian Stan",
+    publishedAt: "2025-06-17T18:00:00Z",
+    category: "SPORTS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1565992441121-4b97c2621d1b?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "sports-6",
+    title: "The Financial Windfall of Hosting the Olympic Games",
+    excerpt:
+      "A deep dive into the economic benefits and drawbacks for cities that host the Olympic Games.",
+    content: "...",
+    author: "Elizabeth Olsen",
+    publishedAt: "2025-06-16T16:00:00Z",
+    category: "SPORTS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1541252260730-0412e8e2108e?w=600&h=400&fit=crop",
+    readTime: "5 min read",
+  },
+];
+
+export const cultureNews: NewsArticle[] = [
+  {
+    id: "more-6",
+    title: "Award-Winning Film Director Announces Ambitious New Project",
+    excerpt:
+      "Multi-million dollar production will explore themes of identity and belonging in the digital age.",
+    content:
+      "An acclaimed film director has announced plans for an ambitious new project...",
+    author: "Isabella Rodriguez",
+    publishedAt: "2025-01-21T17:30:00Z",
+    category: "CULTURE",
+    imageUrl:
+      "https://images.unsplash.com/photo-1489599435384-d5f1a131c7dc?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "culture-1",
+    title: "Lost Painting by Famous Artist Discovered in Attic",
+    excerpt:
+      "A previously unknown masterpiece, valued at over $10 million, was found hidden away in the attic of a family home.",
+    content: "...",
+    author: "Emily White",
+    publishedAt: "2025-06-15T13:45:00Z",
+    category: "CULTURE",
+    imageUrl:
+      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "culture-2",
+    title: "Revival of Ancient Language Sees New Generation of Speakers",
+    excerpt:
+      "An endangered language is making a comeback thanks to a dedicated effort from community elders and young learners.",
+    content: "...",
+    author: "Paul Bettany",
+    publishedAt: "2025-06-20T17:00:00Z",
+    category: "CULTURE",
+    imageUrl:
+      "https://images.unsplash.com/photo-1524188549432-5081a29b35b7?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "culture-3",
+    title: "New Museum Dedicated to the History of Video Games Opens",
+    excerpt:
+      "A new museum celebrates the art and history of video games, from Pong to the latest virtual reality experiences.",
+    content: "...",
+    author: "Jeremy Renner",
+    publishedAt: "2025-06-19T19:00:00Z",
+    category: "CULTURE",
+    imageUrl:
+      "https://images.unsplash.com/photo-1585624838339-a1b739e8ede3?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "culture-4",
+    title: "The Rise of Digital Art and NFTs in the Mainstream",
+    excerpt:
+      "Digital art, authenticated by NFTs, is fetching record prices and challenging the traditional art world.",
+    content: "...",
+    author: "Dave Bautista",
+    publishedAt: "2025-06-18T16:00:00Z",
+    category: "CULTURE",
+    imageUrl:
+      "https://images.unsplash.com/photo-1630571100251-583d9b936848?w=600&h=400&fit=crop",
+    readTime: "5 min read",
+  },
+  {
+    id: "culture-5",
+    title: "Culinary World Mourns the Passing of a Legendary Chef",
+    excerpt:
+      "A chef who revolutionized modern cuisine has passed away, leaving behind a legacy of innovation and inspiration.",
+    content: "...",
+    author: "Karen Gillan",
+    publishedAt: "2025-06-17T14:30:00Z",
+    category: "CULTURE",
+    imageUrl:
+      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "culture-6",
+    title: "Street Art Festival Transforms City into an Outdoor Gallery",
+    excerpt:
+      "An annual street art festival has brought vibrant murals and installations to the city, celebrating local and international artists.",
+    content: "...",
+    author: "Pom Klementieff",
+    publishedAt: "2025-06-16T12:00:00Z",
+    category: "CULTURE",
+    imageUrl:
+      "https://images.unsplash.com/photo-1531981282928-3b39a3a110a3?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+];

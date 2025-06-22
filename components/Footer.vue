@@ -18,8 +18,8 @@
           class="w-full sm:w-80 px-4 py-2 rounded bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
-          type="submit"
-          class="px-6 py-2 rounded bg-red-500 hover:bg-red-600 text-white font-semibold transition"
+          class="px-6 py-2 cursor-pointer rounded bg-red-500 hover:bg-red-600 text-white font-semibold transition"
+          disabled
         >
           Subscribe
         </button>
