@@ -539,6 +539,7 @@ const handleAddArticle = () => {
   };
 
   addArticle(articleToAdd);
+  alert(`Article "${newArticle.value.title}" added successfully!`);
   closeAddForm();
 };
 
@@ -556,13 +557,16 @@ const handleUpdateArticle = () => {
   if (editingArticle.value) {
     const { id, ...updateData } = editingArticle.value;
     updateArticle(id, updateData);
+    alert(`Article "${editingArticle.value.title}" updated successfully!`);
     closeEditModal();
   }
 };
 
 const handleDeleteArticle = () => {
   if (articleToDelete.value) {
+    const title = articleToDelete.value.title;
     deleteArticle(articleToDelete.value.id);
+    alert(`Article "${title}" deleted successfully!`);
     closeDeleteModal();
   }
 };
