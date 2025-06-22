@@ -59,16 +59,13 @@
           </div>
         </div>
         <div class="hidden md:flex items-center">
-          <div
+          <NuxtLink
+            to="/login"
             class="flex items-center gap-2 border border-gray-300 rounded-lg p-2 cursor-pointer hover:bg-base-300"
           >
-            <img
-              src="../assets/user.png"
-              alt="logo"
-              class="w-5 cursor-pointer"
-            />
+            <img src="../assets/user.png" alt="logo" class="w-5" />
             <span class="hidden lg:block text-sm font-semibold">Login</span>
-          </div>
+          </NuxtLink>
         </div>
       </div>
     </div>
