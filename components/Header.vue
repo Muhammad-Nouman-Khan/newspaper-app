@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <div class="w-full px-6 py-2">
+    <div class="w-full px-6 py-6 border-b border-base-300">
       <div class="container mx-auto flex">
         <div class="flex md:hidden items-center justify-center">
           <img
