@@ -26,18 +26,49 @@
             class="border h-8 p-2 rounded-lg border-gray-300 cursor-pointer hover:bg-base-300"
           />
         </div>
-        <div class="flex flex-col flex-1 items-center justify-center">
-          <h1 class="text-2xl md:text-3xl font-bold heading">Daily Herald</h1>
-          <p class="text-sm text-base-content/80">
+        <div
+          class="flex flex-col flex-1 items-center justify-center lg:items-start"
+        >
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold heading">
+            Daily Herald
+          </h1>
+          <p class="text-sm lg:text-lg text-base-content/80">
             TRUSTED NEWS • GLOBAL PERSPECTIVE
           </p>
         </div>
-        <div class="hidden md:flex items-center justify-center">
-          <img
-            src="../assets/user.png"
-            alt="logo"
-            class="border h-10 p-2 rounded-lg border-gray-300 cursor-pointer hover:bg-base-300"
-          />
+        <div class="hidden lg:flex mr-1 items-center">
+          <div
+            class="flex items-center gap-2 border border-gray-300 rounded-lg p-2"
+          >
+            <input
+              type="text"
+              placeholder="search"
+              class="text-sm focus:outline-none"
+            />
+          </div>
+        </div>
+        <div class="hidden lg:flex mr-4 items-center">
+          <div
+            class="flex items-center border border-gray-300 rounded-lg p-2 cursor-pointer hover:bg-base-300"
+          >
+            <img
+              src="../assets/search.png"
+              alt="logo"
+              class="w-5 cursor-pointer"
+            />
+          </div>
+        </div>
+        <div class="hidden md:flex items-center">
+          <div
+            class="flex items-center gap-2 border border-gray-300 rounded-lg p-2 cursor-pointer hover:bg-base-300"
+          >
+            <img
+              src="../assets/user.png"
+              alt="logo"
+              class="w-5 cursor-pointer"
+            />
+            <span class="hidden lg:block text-sm font-semibold">Login</span>
+          </div>
         </div>
       </div>
     </div>
