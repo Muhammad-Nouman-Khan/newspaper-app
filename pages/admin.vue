@@ -1,5 +1,6 @@
 <template>
   <main class="container mx-auto px-6 py-12">
+    <!-- Header -->
     <div
       class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8"
     >
@@ -12,6 +13,7 @@
         <p class="text-gray-600 text-sm">
           Manage all news articles across all categories
         </p>
+        <p class="text-sm text-primary mt-1">Welcome, {{ user?.email }}!</p>
       </div>
 
       <button
@@ -456,8 +458,14 @@ import { ref, computed } from "vue";
 import type { NewsArticle } from "~/data/news";
 import { formatDate } from "~/utils/dateFormatter";
 import { useNews } from "~/composables/useNews";
+import { useAuth } from "~/composables/useAuth";
+
+definePageMeta({
+  middleware: "auth",
+});
 
 const { getAllArticles, addArticle, updateArticle, deleteArticle } = useNews();
+const { user } = useAuth();
 
 const showAddForm = ref(false);
 const showEditModal = ref(false);

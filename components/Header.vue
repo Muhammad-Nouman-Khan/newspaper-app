@@ -67,11 +67,34 @@
             <img src="../assets/user.png" alt="logo" class="w-5" />
             <span class="hidden lg:block text-sm font-semibold">Login</span>
           </NuxtLink>
-          <div
-            v-else
-            class="flex items-center gap-2 border border-gray-300 rounded-lg p-2 cursor-pointer"
-          >
-            <img src="../assets/user.png" alt="logo" class="w-5" />
+          <div v-else class="flex items-center gap-2">
+            <div
+              class="flex items-center gap-2 border border-gray-300 rounded-lg p-2 cursor-pointer"
+            >
+              <img src="../assets/user.png" alt="logo" class="w-5" />
+              <span class="hidden lg:block text-sm font-semibold">{{
+                user?.email
+              }}</span>
+            </div>
+            <button
+              @click="handleLogout"
+              class="flex items-center gap-2 border border-gray-300 rounded-lg p-2 cursor-pointer hover:bg-base-300"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                ></path>
+              </svg>
+              <span class="hidden lg:block text-sm font-semibold">Logout</span>
+            </button>
           </div>
         </div>
       </div>
@@ -97,7 +120,29 @@
     </div>
     <div class="border-b border-base-300 px-6 py-2">
       <div class="container mx-auto flex items-center justify-end">
+        <div
+          v-if="!isLoggedIn"
+          class="flex items-center gap-2 text-sm text-error bg-error/10 px-3 py-2 rounded-lg border border-error/20"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+            ></path>
+          </svg>
+          <span class="font-medium"
+            >Login to enable admin: Add, Edit & Delete articles</span
+          >
+        </div>
         <NuxtLink
+          v-else
           to="/admin"
           class="flex items-center gap-2 border border-gray-300 rounded-lg p-2 cursor-pointer hover:bg-base-300"
         >
@@ -116,7 +161,7 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 
-const { isLoggedIn } = useAuth();
+const { isLoggedIn, user, logout } = useAuth();
 
 const route = useRoute();
 const navigationItems = [
@@ -139,5 +184,9 @@ const isActive = (item: string) => {
     return route.path === "/";
   }
   return route.path === `/${item.toLocaleLowerCase()}`;
+};
+
+const handleLogout = () => {
+  logout();
 };
 </script>
