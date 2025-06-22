@@ -109,7 +109,7 @@
                 <div class="text-center mt-4">
                   <p class="text-sm">
                     Don't have an account?
-                    <NuxtLink to="/signup" class="text-primary hover:underline">
+                    <NuxtLink to="/" class="text-primary hover:underline">
                       Create one
                     </NuxtLink>
                   </p>

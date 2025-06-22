@@ -20,11 +20,32 @@
     <div class="w-full px-6 py-6 border-b border-base-300">
       <div class="container mx-auto flex">
         <div class="flex md:hidden items-center justify-center">
-          <img
-            src="../assets/icons8-menu.svg"
-            alt="logo"
+          <button
+            @click="toggleMobileMenu"
             class="border h-8 p-2 rounded-lg border-gray-300 cursor-pointer hover:bg-base-300"
-          />
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                v-if="!isMobileMenuOpen"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+              <path
+                v-else
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
         </div>
         <div
           class="flex flex-col flex-1 items-center justify-center lg:items-start"
@@ -99,6 +120,114 @@
         </div>
       </div>
     </div>
+
+    <!-- Mobile Menu -->
+    <div
+      v-if="isMobileMenuOpen"
+      class="md:hidden border-b border-base-300 bg-base-100 shadow-lg"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <!-- Navigation Links -->
+        <nav class="mb-6">
+          <ul class="space-y-3">
+            <li
+              v-for="item in navigationItems"
+              :key="item"
+              class="border-b border-base-300 pb-2"
+            >
+              <NuxtLink
+                :to="getNavLink(item)"
+                @click="closeMobileMenu"
+                :class="[
+                  'block text-base font-medium transition-colors duration-200 py-2',
+                  isActive(item)
+                    ? 'text-primary'
+                    : 'text-base-content hover:text-primary',
+                ]"
+              >
+                {{ item }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="mb-6">
+          <div
+            class="flex items-center gap-2 border border-gray-300 rounded-lg p-3"
+          >
+            <input
+              type="text"
+              placeholder="Search articles..."
+              class="text-sm focus:outline-none flex-1"
+            />
+            <img
+              src="../assets/search.png"
+              alt="search"
+              class="w-5 cursor-pointer"
+            />
+          </div>
+        </div>
+
+        <!-- Auth Section -->
+        <div class="space-y-3">
+          <div v-if="!isLoggedIn">
+            <NuxtLink
+              to="/login"
+              @click="closeMobileMenu"
+              class="flex items-center gap-3 w-full p-3 border border-gray-300 rounded-lg hover:bg-base-300 transition-colors"
+            >
+              <img src="../assets/user.png" alt="login" class="w-5" />
+              <span class="font-semibold">Login</span>
+            </NuxtLink>
+
+            <!-- Admin Access Message -->
+          </div>
+
+          <div v-else class="space-y-3">
+            <!-- User Info -->
+            <div
+              class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg bg-base-200"
+            >
+              <img src="../assets/user.png" alt="user" class="w-5" />
+              <span class="font-semibold text-sm">{{ user?.email }}</span>
+            </div>
+
+            <!-- Admin Link -->
+            <NuxtLink
+              to="/admin"
+              @click="closeMobileMenu"
+              class="flex items-center gap-3 w-full p-3 border border-gray-300 rounded-lg hover:bg-base-300 transition-colors"
+            >
+              <img src="../assets/settings.png" alt="admin" class="w-5" />
+              <span class="font-semibold">Admin mode</span>
+            </NuxtLink>
+
+            <!-- Logout Button -->
+            <button
+              @click="handleMobileLogout"
+              class="flex items-center gap-3 w-full p-3 border border-gray-300 rounded-lg hover:bg-base-300 transition-colors text-left"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                ></path>
+              </svg>
+              <span class="font-semibold">Logout</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="hidden md:flex border-b border-base-300 py-4">
       <div class="container mx-auto flex items-center justify-center">
         <nav class="flex items-center space-x-8">
@@ -159,11 +288,14 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import { useRoute } from "vue-router";
 
 const { isLoggedIn, user, logout } = useAuth();
 
 const route = useRoute();
+const isMobileMenuOpen = ref(false);
+
 const navigationItems = [
   "HOME",
   "POLITICS",
@@ -186,7 +318,20 @@ const isActive = (item: string) => {
   return route.path === `/${item.toLocaleLowerCase()}`;
 };
 
+const toggleMobileMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
+
+const closeMobileMenu = () => {
+  isMobileMenuOpen.value = false;
+};
+
 const handleLogout = () => {
   logout();
+};
+
+const handleMobileLogout = () => {
+  logout();
+  closeMobileMenu();
 };
 </script>
