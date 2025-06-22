@@ -9,7 +9,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-5">
       <article
-        v-for="story in moreStories"
+        v-for="story in more"
         :key="story.id"
         class="group cursor-pointer bg-base-100 rounded-xl shadow-lg border border-base-300 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
         @click="openDialog(story)"
@@ -59,10 +59,12 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { moreStories } from "~/data/news";
 import { formatDate } from "~/utils/dateFormatter";
 import NewsDialog from "./NewsDialog.vue";
 import type { NewsArticle } from "~/data/news";
+import { useNews } from "~/composables/useNews";
+
+const { more } = useNews();
 
 const selectedNews = ref<NewsArticle | null>(null);
 const openDialog = (news: NewsArticle) => {

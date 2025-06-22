@@ -4,20 +4,21 @@
       <!-- Hero News -->
       <div class="lg:col-span-2">
         <article
+          v-if="hero"
           class="group cursor-pointer bg-base-100 rounded-xl shadow-lg border border-base-300 overflow-hidden hover:shadow-xl transition-shadow duration-300"
-          @click="openDialog(heroNews)"
+          @click="openDialog(hero)"
         >
           <div class="relative overflow-hidden rounded-lg mb-4">
             <img
-              :src="heroNews.imageUrl"
-              :alt="heroNews.title"
+              :src="hero.imageUrl"
+              :alt="hero.title"
               class="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300 rounded-t-xl"
             />
             <div class="absolute top-4 left-4">
               <span
                 class="bg-primary text-primary-content px-3 py-1 rounded-full text-xs font-semibold"
               >
-                {{ heroNews.category }}
+                {{ hero.category }}
               </span>
             </div>
           </div>
@@ -25,24 +26,22 @@
             <h1
               class="text-3xl lg:text-4xl heading font-bold text-base-content leading-tight group-hover:text-primary transition-colors duration-200"
             >
-              {{ heroNews.title }}
+              {{ hero.title }}
             </h1>
 
             <p class="text-lg text-base-content/80 leading-relaxed">
-              {{ heroNews.excerpt }}
+              {{ hero.excerpt }}
             </p>
 
             <div
               class="flex items-center justify-between text-sm text-base-content/60"
             >
               <div class="flex items-center space-x-4">
-                <span class="font-medium">{{ heroNews.author }}</span>
+                <span class="font-medium">{{ hero.author }}</span>
                 <span>•</span>
-                <span>{{ formatDate(heroNews.publishedAt) }}</span>
+                <span>{{ formatDate(hero.publishedAt) }}</span>
               </div>
-              <span class="text-primary font-medium">{{
-                heroNews.readTime
-              }}</span>
+              <span class="text-primary font-medium">{{ hero.readTime }}</span>
             </div>
           </div>
         </article>
@@ -62,7 +61,7 @@
             class="space-y-6 lg:max-h-[432px] lg:overflow-y-auto custom-scrollbar"
           >
             <article
-              v-for="news in latestNews"
+              v-for="news in latest"
               :key="news.id"
               class="group cursor-pointer bg-base-200 rounded-lg p-4 hover:bg-base-300 transition-colors duration-200 border border-base-300 hover:shadow-md"
               @click="openDialog(news)"
@@ -113,10 +112,12 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { heroNews, latestNews } from "~/data/news";
 import { formatDate } from "~/utils/dateFormatter";
 import NewsDialog from "./NewsDialog.vue";
 import type { NewsArticle } from "~/data/news";
+import { useNews } from "~/composables/useNews";
+
+const { hero, latest } = useNews();
 
 const selectedNews = ref<NewsArticle | null>(null);
 const openDialog = (news: NewsArticle) => {

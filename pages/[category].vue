@@ -72,41 +72,15 @@
 import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
 import type { NewsArticle } from "~/data/news";
-import {
-  politicsNews,
-  worldNews,
-  businessNews,
-  technologyNews,
-  sportsNews,
-  cultureNews,
-  opinionNews,
-} from "~/data/news";
 import { formatDate } from "~/utils/dateFormatter";
 import NewsDialog from "~/components/NewsDialog.vue";
+import { useNews } from "~/composables/useNews";
 
 const route = useRoute();
-const category = computed(() => route.params.category as string);
+const { getArticlesByCategory } = useNews();
 
-const articles = computed<NewsArticle[]>(() => {
-  switch (category.value.toLowerCase()) {
-    case "politics":
-      return politicsNews;
-    case "world":
-      return worldNews;
-    case "business":
-      return businessNews;
-    case "technology":
-      return technologyNews;
-    case "sports":
-      return sportsNews;
-    case "culture":
-      return cultureNews;
-    case "opinion":
-      return opinionNews;
-    default:
-      return [];
-  }
-});
+const category = computed(() => route.params.category as string);
+const articles = computed(() => getArticlesByCategory(category.value));
 
 const selectedNews = ref<NewsArticle | null>(null);
 const openDialog = (news: NewsArticle) => {

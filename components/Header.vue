@@ -79,10 +79,10 @@
     <div class="hidden md:flex border-b border-base-300 py-4">
       <div class="container mx-auto flex items-center justify-center">
         <nav class="flex items-center space-x-8">
-          <a
+          <NuxtLink
             v-for="item in navigationItems"
             :key="item"
-            :href="getNavLink(item)"
+            :to="getNavLink(item)"
             :class="[
               'text-sm font-medium transition-colors duration-200',
               isActive(item)
@@ -91,13 +91,14 @@
             ]"
           >
             {{ item }}
-          </a>
+          </NuxtLink>
         </nav>
       </div>
     </div>
     <div class="border-b border-base-300 px-6 py-2">
       <div class="container mx-auto flex items-center justify-end">
-        <div
+        <NuxtLink
+          to="/admin"
           class="flex items-center gap-2 border border-gray-300 rounded-lg p-2 cursor-pointer hover:bg-base-300"
         >
           <img
@@ -106,7 +107,7 @@
             class="w-5 cursor-pointer"
           />
           <span class="block text-sm font-semibold">Admin mode</span>
-        </div>
+        </NuxtLink>
       </div>
     </div>
   </header>
