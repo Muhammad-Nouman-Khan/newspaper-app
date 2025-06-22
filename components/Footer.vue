@@ -30,7 +30,7 @@
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
       <!-- About -->
       <div>
-        <h3 class="text-xl font-bold text-white mb-2 heading">Daily Herald</h3>
+        <h3 class="text-xl font-bold text-white mb-2 heading">NuxtNews</h3>
         <p class="text-gray-400 mb-4">
           Your trusted source for breaking news, in-depth analysis, and premium
           journalism. Committed to delivering truth and transparency in every
@@ -87,8 +87,7 @@
             <span class="material-icons text-base">phone</span>+1 (555) 123-4567
           </li>
           <li class="flex items-center gap-2">
-            <span class="material-icons text-base">email</span
-            >news@dailyherald.com
+            <span class="material-icons text-base">email</span>news@nuxtnews.com
           </li>
         </ul>
       </div>
@@ -98,7 +97,7 @@
     <div
       class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500"
     >
-      <div class="mb-2 md:mb-0">© 2024 Daily Herald. All rights reserved.</div>
+      <div class="mb-2 md:mb-0">© 2024 NuxtNews. All rights reserved.</div>
       <div class="flex space-x-4">
         <a href="#" class="hover:text-blue-400">Privacy Policy</a>
         <a href="#" class="hover:text-blue-400">Terms of Service</a>

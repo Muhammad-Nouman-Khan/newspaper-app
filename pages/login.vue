@@ -74,7 +74,7 @@
           <form @submit.prevent="handleLogin">
             <div class="space-y-4">
               <div class="text-center lg:text-left mb-6">
-                <h1 class="text-3xl font-bold heading mb-2">Daily Herald</h1>
+                <h1 class="text-3xl font-bold heading mb-2">NuxtNews</h1>
                 <p class="text-sm opacity-70">
                   Sign in to your account to continue.
                 </p>
