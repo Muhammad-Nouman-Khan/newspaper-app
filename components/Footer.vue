@@ -84,7 +84,7 @@
             Street, New York, NY 10001
           </li>
           <li class="flex items-center gap-2">
-            <span class="material-icons text-base">phone</span>+1 (555) 123-4567
+            <span class="material-icons text-base">phone</span>0900-78601
           </li>
           <li class="flex items-center gap-2">
             <span class="material-icons text-base">email</span>news@nuxtnews.com
