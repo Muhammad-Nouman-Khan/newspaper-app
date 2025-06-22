@@ -79,6 +79,7 @@ import {
   technologyNews,
   sportsNews,
   cultureNews,
+  opinionNews,
 } from "~/data/news";
 import { formatDate } from "~/utils/dateFormatter";
 import NewsDialog from "~/components/NewsDialog.vue";
@@ -100,6 +101,8 @@ const articles = computed<NewsArticle[]>(() => {
       return sportsNews;
     case "culture":
       return cultureNews;
+    case "opinion":
+      return opinionNews;
     default:
       return [];
   }

@@ -20,8 +20,8 @@ export const heroNews: NewsArticle = {
   author: "Sarah Johnson",
   publishedAt: "2025-06-22T08:30:00Z",
   category: "WORLD",
-  imageUrl:
-    "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&h=600&fit=crop&auto=format",
+
+  imageUrl: "/hero.avif",
   readTime: "5 min read",
 };
 
@@ -36,8 +36,7 @@ export const latestNews: NewsArticle[] = [
     author: "Michael Chen",
     publishedAt: "2025-01-22T07:15:00Z",
     category: "TECHNOLOGY",
-    imageUrl:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop",
+    imageUrl: "/latest1.jfif",
     readTime: "3 min read",
   },
   {
@@ -51,8 +50,7 @@ export const latestNews: NewsArticle[] = [
     author: "David Rodriguez",
     publishedAt: "2025-01-22T06:45:00Z",
     category: "BUSINESS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=300&fit=crop",
+    imageUrl: "/l2.jfif",
     readTime: "4 min read",
   },
   {
@@ -65,8 +63,7 @@ export const latestNews: NewsArticle[] = [
     author: "Jennifer Martinez",
     publishedAt: "2025-01-22T05:30:00Z",
     category: "SPORTS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+    imageUrl: "/l3.jfif",
     readTime: "2 min read",
   },
   {
@@ -79,8 +76,7 @@ export const latestNews: NewsArticle[] = [
     author: "Alex Thompson",
     publishedAt: "2025-01-22T04:20:00Z",
     category: "CULTURE",
-    imageUrl:
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop",
+    imageUrl: "/l4.jfif",
     readTime: "3 min read",
   },
   {
@@ -93,8 +89,7 @@ export const latestNews: NewsArticle[] = [
     author: "Robert Kim",
     publishedAt: "2025-01-22T03:10:00Z",
     category: "POLITICS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=300&fit=crop",
+    imageUrl: "/l5.jfif",
     readTime: "4 min read",
   },
   {
@@ -107,8 +102,7 @@ export const latestNews: NewsArticle[] = [
     author: "Lisa Wang",
     publishedAt: "2025-01-22T02:00:00Z",
     category: "TECHNOLOGY",
-    imageUrl:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop",
+    imageUrl: "/l6.jfif",
     readTime: "3 min read",
   },
   {
@@ -121,8 +115,7 @@ export const latestNews: NewsArticle[] = [
     author: "Maria Garcia",
     publishedAt: "2025-01-22T01:30:00Z",
     category: "BUSINESS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop",
+    imageUrl: "/l7.jfif",
     readTime: "4 min read",
   },
   {
@@ -135,8 +128,7 @@ export const latestNews: NewsArticle[] = [
     author: "Thomas Anderson",
     publishedAt: "2025-01-22T00:45:00Z",
     category: "CULTURE",
-    imageUrl:
-      "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=300&fit=crop",
+    imageUrl: "/l8.jfif",
     readTime: "2 min read",
   },
 ];
@@ -152,8 +144,7 @@ export const moreStories: NewsArticle[] = [
     author: "Elizabeth Washington",
     publishedAt: "2025-01-21T22:15:00Z",
     category: "POLITICS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+    imageUrl: "/m1.jfif",
     readTime: "4 min read",
   },
   {
@@ -167,8 +158,7 @@ export const moreStories: NewsArticle[] = [
     author: "Dr. James Chen",
     publishedAt: "2025-01-21T21:30:00Z",
     category: "WORLD",
-    imageUrl:
-      "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&h=400&fit=crop",
+    imageUrl: "/m2.jfif",
     readTime: "5 min read",
   },
   {
@@ -181,8 +171,7 @@ export const moreStories: NewsArticle[] = [
     author: "Rachel Kim",
     publishedAt: "2025-01-21T20:45:00Z",
     category: "BUSINESS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+    imageUrl: "/m3.jfif",
     readTime: "3 min read",
   },
   {
@@ -195,8 +184,7 @@ export const moreStories: NewsArticle[] = [
     author: "Dr. Sarah Zhang",
     publishedAt: "2025-01-21T19:20:00Z",
     category: "TECHNOLOGY",
-    imageUrl:
-      "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop",
+    imageUrl: "/m4.jfif",
     readTime: "4 min read",
   },
   {
@@ -209,8 +197,7 @@ export const moreStories: NewsArticle[] = [
     author: "Marcus Johnson",
     publishedAt: "2025-01-21T18:10:00Z",
     category: "SPORTS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXRobGV0ZXxlbnwwfHwwfHx8MA%3D%3D",
+    imageUrl: "/m5.avif",
     readTime: "3 min read",
   },
   {
@@ -223,8 +210,7 @@ export const moreStories: NewsArticle[] = [
     author: "Isabella Rodriguez",
     publishedAt: "2025-01-21T17:30:00Z",
     category: "CULTURE",
-    imageUrl:
-      "https://images.unsplash.com/photo-1578269174936-2709b6aeb913?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXdhcmR8ZW58MHx8MHx8fDA%3D",
+    imageUrl: "/m6.avif",
     readTime: "4 min read",
   },
 ];
@@ -240,8 +226,7 @@ export const politicsNews: NewsArticle[] = [
     author: "Elizabeth Washington",
     publishedAt: "2025-01-21T22:15:00Z",
     category: "POLITICS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+    imageUrl: "/p1.jfif",
     readTime: "4 min read",
   },
   {
@@ -254,8 +239,7 @@ export const politicsNews: NewsArticle[] = [
     author: "John Doe",
     publishedAt: "2025-06-20T10:00:00Z",
     category: "POLITICS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1560518883-ce09059ee41a?w=600&h=400&fit=crop",
+    imageUrl: "/p2.avif",
     readTime: "3 min read",
   },
   {
@@ -267,8 +251,7 @@ export const politicsNews: NewsArticle[] = [
     author: "Samantha Bee",
     publishedAt: "2025-06-20T11:00:00Z",
     category: "POLITICS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1504966981333-1ac8809be1cf?w=600&h=400&fit=crop",
+    imageUrl: "/p3.avif",
     readTime: "5 min read",
   },
   {
@@ -280,8 +263,7 @@ export const politicsNews: NewsArticle[] = [
     author: "Robert Downy",
     publishedAt: "2025-06-19T15:00:00Z",
     category: "POLITICS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1529107386315-e4214f52f744?w=600&h=400&fit=crop",
+    imageUrl: "/p4.avif",
     readTime: "4 min read",
   },
   {
@@ -293,8 +275,7 @@ export const politicsNews: NewsArticle[] = [
     author: "Chris Evans",
     publishedAt: "2025-06-18T18:00:00Z",
     category: "POLITICS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1541876388-3a8342881387?w=600&h=400&fit=crop",
+    imageUrl: "/p5.avif",
     readTime: "3 min read",
   },
   {
@@ -306,8 +287,7 @@ export const politicsNews: NewsArticle[] = [
     author: "Scarlett Johan",
     publishedAt: "2025-06-17T12:30:00Z",
     category: "POLITICS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1587937332529-21f41584a2a1?w=600&h=400&fit=crop",
+    imageUrl: "/p6.avif",
     readTime: "4 min read",
   },
   {
@@ -319,8 +299,7 @@ export const politicsNews: NewsArticle[] = [
     author: "Mark Ruff",
     publishedAt: "2025-06-16T10:00:00Z",
     category: "POLITICS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop",
+    imageUrl: "/p7.avif",
     readTime: "3 min read",
   },
 ];
@@ -337,8 +316,7 @@ export const worldNews: NewsArticle[] = [
     author: "Dr. James Chen",
     publishedAt: "2025-01-21T21:30:00Z",
     category: "WORLD",
-    imageUrl:
-      "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&h=400&fit=crop",
+    imageUrl: "/w1.jfif",
     readTime: "5 min read",
   },
   {
@@ -350,8 +328,7 @@ export const worldNews: NewsArticle[] = [
     author: "Maria Rodriguez",
     publishedAt: "2025-06-19T14:30:00Z",
     category: "WORLD",
-    imageUrl:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop",
+    imageUrl: "/w2.jfif",
     readTime: "4 min read",
   },
   {
@@ -363,8 +340,7 @@ export const worldNews: NewsArticle[] = [
     author: "Angela Bassett",
     publishedAt: "2025-06-20T16:00:00Z",
     category: "WORLD",
-    imageUrl:
-      "https://images.unsplash.com/photo-1504992963429-56f2d9159b35?w=600&h=400&fit=crop",
+    imageUrl: "/w3.avif",
     readTime: "5 min read",
   },
   {
@@ -376,8 +352,7 @@ export const worldNews: NewsArticle[] = [
     author: "Lupita Nyongo",
     publishedAt: "2025-06-19T18:30:00Z",
     category: "WORLD",
-    imageUrl:
-      "https://images.unsplash.com/photo-1542037104-91ad68d394b3?w=600&h=400&fit=crop",
+    imageUrl: "/w4.avif",
     readTime: "4 min read",
   },
   {
@@ -389,8 +364,7 @@ export const worldNews: NewsArticle[] = [
     author: "Danai Gurira",
     publishedAt: "2025-06-18T14:00:00Z",
     category: "WORLD",
-    imageUrl:
-      "https://images.unsplash.com/photo-1581125914199-2a29a2a75431?w=600&h=400&fit=crop",
+    imageUrl: "/w5.avif",
     readTime: "4 min read",
   },
   {
@@ -402,8 +376,7 @@ export const worldNews: NewsArticle[] = [
     author: "Letitia Wright",
     publishedAt: "2025-06-17T11:45:00Z",
     category: "WORLD",
-    imageUrl:
-      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop",
+    imageUrl: "/w6.jfif",
     readTime: "3 min read",
   },
   {
@@ -415,8 +388,7 @@ export const worldNews: NewsArticle[] = [
     author: "Winston Duke",
     publishedAt: "2025-06-16T09:30:00Z",
     category: "WORLD",
-    imageUrl:
-      "https://images.unsplash.com/photo-1579273188864-3535a5a1f6a6?w=600&h=400&fit=crop",
+    imageUrl: "/w7.webp",
     readTime: "5 min read",
   },
 ];
@@ -432,8 +404,7 @@ export const businessNews: NewsArticle[] = [
     author: "Rachel Kim",
     publishedAt: "2025-01-21T20:45:00Z",
     category: "BUSINESS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+    imageUrl: "/b1.jfif",
     readTime: "3 min read",
   },
   {
@@ -445,8 +416,7 @@ export const businessNews: NewsArticle[] = [
     author: "David Smith",
     publishedAt: "2025-06-18T11:00:00Z",
     category: "BUSINESS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1578574577315-3f16ce76751b?w=600&h=400&fit=crop",
+    imageUrl: "/b2.avif",
     readTime: "5 min read",
   },
   {
@@ -458,8 +428,7 @@ export const businessNews: NewsArticle[] = [
     author: "Chadwick Bose",
     publishedAt: "2025-06-20T13:00:00Z",
     category: "BUSINESS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=400&fit=crop",
+    imageUrl: "/b3.jfif",
     readTime: "4 min read",
   },
   {
@@ -471,8 +440,7 @@ export const businessNews: NewsArticle[] = [
     author: "Michael B Jordan",
     publishedAt: "2025-06-19T16:30:00Z",
     category: "BUSINESS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
+    imageUrl: "/b4.jfif",
     readTime: "5 min read",
   },
   {
@@ -484,8 +452,7 @@ export const businessNews: NewsArticle[] = [
     author: "Forest Whitaker",
     publishedAt: "2025-06-18T12:00:00Z",
     category: "BUSINESS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1621452298216-54a852363e15?w=600&h=400&fit=crop",
+    imageUrl: "/b5.avif",
     readTime: "4 min read",
   },
   {
@@ -497,8 +464,7 @@ export const businessNews: NewsArticle[] = [
     author: "Daniel Kaluuya",
     publishedAt: "2025-06-17T15:00:00Z",
     category: "BUSINESS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
+    imageUrl: "/b6.jfif",
     readTime: "3 min read",
   },
   {
@@ -510,8 +476,7 @@ export const businessNews: NewsArticle[] = [
     author: "Sterling K Brown",
     publishedAt: "2025-06-16T11:00:00Z",
     category: "BUSINESS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
+    imageUrl: "/b7.jfif",
     readTime: "4 min read",
   },
 ];
@@ -527,8 +492,7 @@ export const technologyNews: NewsArticle[] = [
     author: "Dr. Sarah Zhang",
     publishedAt: "2025-01-21T19:20:00Z",
     category: "TECHNOLOGY",
-    imageUrl:
-      "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop",
+    imageUrl: "/t1.jfif",
     readTime: "4 min read",
   },
   {
@@ -540,8 +504,7 @@ export const technologyNews: NewsArticle[] = [
     author: "Alex Williams",
     publishedAt: "2025-06-17T09:00:00Z",
     category: "TECHNOLOGY",
-    imageUrl:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
+    imageUrl: "/t2.jfif",
     readTime: "4 min read",
   },
   {
@@ -554,8 +517,7 @@ export const technologyNews: NewsArticle[] = [
     author: "Gwyneth Paltrow",
     publishedAt: "2025-06-20T14:00:00Z",
     category: "TECHNOLOGY",
-    imageUrl:
-      "https://images.unsplash.com/photo-1614926857186-a732a35a5525?w=600&h=400&fit=crop",
+    imageUrl: "/t3.avif",
     readTime: "5 min read",
   },
   {
@@ -567,8 +529,7 @@ export const technologyNews: NewsArticle[] = [
     author: "Don Cheadle",
     publishedAt: "2025-06-19T17:00:00Z",
     category: "TECHNOLOGY",
-    imageUrl:
-      "https://images.unsplash.com/photo-1611003223225-fb3c35485458?w=600&h=400&fit=crop",
+    imageUrl: "/t4.avif",
     readTime: "4 min read",
   },
   {
@@ -580,8 +541,7 @@ export const technologyNews: NewsArticle[] = [
     author: "Benedict Cumber",
     publishedAt: "2025-06-18T13:00:00Z",
     category: "TECHNOLOGY",
-    imageUrl:
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop",
+    imageUrl: "/t5.jfif",
     readTime: "4 min read",
   },
   {
@@ -593,8 +553,7 @@ export const technologyNews: NewsArticle[] = [
     author: "Zoe Saldana",
     publishedAt: "2025-06-17T16:00:00Z",
     category: "TECHNOLOGY",
-    imageUrl:
-      "https://images.unsplash.com/photo-1639762681057-408e52192e56?w=600&h=400&fit=crop",
+    imageUrl: "/t6.avif",
     readTime: "5 min read",
   },
   {
@@ -606,8 +565,7 @@ export const technologyNews: NewsArticle[] = [
     author: "Tom Holland",
     publishedAt: "2025-06-16T14:00:00Z",
     category: "TECHNOLOGY",
-    imageUrl:
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
+    imageUrl: "/t7.jfif",
     readTime: "4 min read",
   },
 ];
@@ -623,8 +581,7 @@ export const sportsNews: NewsArticle[] = [
     author: "Marcus Johnson",
     publishedAt: "2025-01-21T18:10:00Z",
     category: "SPORTS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
+    imageUrl: "/s1.jfif",
     readTime: "3 min read",
   },
   {
@@ -636,8 +593,7 @@ export const sportsNews: NewsArticle[] = [
     author: "Jessica Lee",
     publishedAt: "2025-06-16T20:00:00Z",
     category: "SPORTS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1552667466-07770ae110d0?w=600&h=400&fit=crop",
+    imageUrl: "/s2.jfif",
     readTime: "3 min read",
   },
   {
@@ -649,8 +605,7 @@ export const sportsNews: NewsArticle[] = [
     author: "Chris Hemsworth",
     publishedAt: "2025-06-20T21:00:00Z",
     category: "SPORTS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1543351349-416942735f2f?w=600&h=400&fit=crop",
+    imageUrl: "/s3.avif",
     readTime: "4 min read",
   },
   {
@@ -662,8 +617,7 @@ export const sportsNews: NewsArticle[] = [
     author: "Tom Hiddleston",
     publishedAt: "2025-06-19T22:00:00Z",
     category: "SPORTS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&h=400&fit=crop",
+    imageUrl: "/s4.jfif",
     readTime: "3 min read",
   },
   {
@@ -675,8 +629,7 @@ export const sportsNews: NewsArticle[] = [
     author: "Anthony Mackie",
     publishedAt: "2025-06-18T19:30:00Z",
     category: "SPORTS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517649763942-7e3c76277c66?w=600&h=400&fit=crop",
+    imageUrl: "/s5.avif",
     readTime: "4 min read",
   },
   {
@@ -688,8 +641,7 @@ export const sportsNews: NewsArticle[] = [
     author: "Sebastian Stan",
     publishedAt: "2025-06-17T18:00:00Z",
     category: "SPORTS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1565992441121-4b97c2621d1b?w=600&h=400&fit=crop",
+    imageUrl: "/s6.avif",
     readTime: "3 min read",
   },
   {
@@ -701,8 +653,7 @@ export const sportsNews: NewsArticle[] = [
     author: "Elizabeth Olsen",
     publishedAt: "2025-06-16T16:00:00Z",
     category: "SPORTS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1541252260730-0412e8e2108e?w=600&h=400&fit=crop",
+    imageUrl: "/s7.avif",
     readTime: "5 min read",
   },
 ];
@@ -718,8 +669,7 @@ export const cultureNews: NewsArticle[] = [
     author: "Isabella Rodriguez",
     publishedAt: "2025-01-21T17:30:00Z",
     category: "CULTURE",
-    imageUrl:
-      "https://images.unsplash.com/photo-1489599435384-d5f1a131c7dc?w=600&h=400&fit=crop",
+    imageUrl: "/c1.avif",
     readTime: "4 min read",
   },
   {
@@ -731,8 +681,7 @@ export const cultureNews: NewsArticle[] = [
     author: "Emily White",
     publishedAt: "2025-06-15T13:45:00Z",
     category: "CULTURE",
-    imageUrl:
-      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=400&fit=crop",
+    imageUrl: "/c2.jfif",
     readTime: "3 min read",
   },
   {
@@ -744,8 +693,7 @@ export const cultureNews: NewsArticle[] = [
     author: "Paul Bettany",
     publishedAt: "2025-06-20T17:00:00Z",
     category: "CULTURE",
-    imageUrl:
-      "https://images.unsplash.com/photo-1524188549432-5081a29b35b7?w=600&h=400&fit=crop",
+    imageUrl: "/c3.webp",
     readTime: "4 min read",
   },
   {
@@ -757,8 +705,7 @@ export const cultureNews: NewsArticle[] = [
     author: "Jeremy Renner",
     publishedAt: "2025-06-19T19:00:00Z",
     category: "CULTURE",
-    imageUrl:
-      "https://images.unsplash.com/photo-1585624838339-a1b739e8ede3?w=600&h=400&fit=crop",
+    imageUrl: "/c4.webp",
     readTime: "3 min read",
   },
   {
@@ -770,8 +717,7 @@ export const cultureNews: NewsArticle[] = [
     author: "Dave Bautista",
     publishedAt: "2025-06-18T16:00:00Z",
     category: "CULTURE",
-    imageUrl:
-      "https://images.unsplash.com/photo-1630571100251-583d9b936848?w=600&h=400&fit=crop",
+    imageUrl: "/c5.webp",
     readTime: "5 min read",
   },
   {
@@ -783,8 +729,7 @@ export const cultureNews: NewsArticle[] = [
     author: "Karen Gillan",
     publishedAt: "2025-06-17T14:30:00Z",
     category: "CULTURE",
-    imageUrl:
-      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
+    imageUrl: "/c6.jfif",
     readTime: "3 min read",
   },
   {
@@ -796,8 +741,96 @@ export const cultureNews: NewsArticle[] = [
     author: "Pom Klementieff",
     publishedAt: "2025-06-16T12:00:00Z",
     category: "CULTURE",
-    imageUrl:
-      "https://images.unsplash.com/photo-1531981282928-3b39a3a110a3?w=600&h=400&fit=crop",
+    imageUrl: "/c7.avif",
+    readTime: "4 min read",
+  },
+];
+
+export const opinionNews: NewsArticle[] = [
+  {
+    id: "more-4",
+    title: "Quantum Computing Breakthrough Achieves Quantum Supremacy",
+    excerpt:
+      "Scientists solve complex mathematical problem in minutes that would take traditional computers thousands of years.",
+    content:
+      "A team of researchers has achieved a major breakthrough in quantum computing...",
+    author: "Dr. Sarah Zhang",
+    publishedAt: "2025-01-21T19:20:00Z",
+    category: "OPINION",
+    imageUrl: "/t1.jfif",
+    readTime: "4 min read",
+  },
+  {
+    id: "tech-1",
+    title: "New AI Model Can Generate Realistic Video from Text Descriptions",
+    excerpt:
+      "A groundbreaking AI has been unveiled that can create high-fidelity video clips from simple text prompts, opening new frontiers in content creation.",
+    content: "...",
+    author: "Alex Williams",
+    publishedAt: "2025-06-17T09:00:00Z",
+    category: "OPINION",
+    imageUrl: "/t2.jfif",
+    readTime: "4 min read",
+  },
+  {
+    id: "tech-2",
+    title:
+      "Breakthrough in Battery Technology Promises 1000-Mile Range for EVs",
+    excerpt:
+      "A new battery chemistry could eliminate range anxiety for electric vehicle owners.",
+    content: "...",
+    author: "Gwyneth Paltrow",
+    publishedAt: "2025-06-20T14:00:00Z",
+    category: "OPINION",
+    imageUrl: "/t3.avif",
+    readTime: "5 min read",
+  },
+  {
+    id: "tech-3",
+    title: "5G Adoption Accelerates, Unlocking New Possibilities for IoT",
+    excerpt:
+      "The rollout of 5G networks is happening faster than anticipated, paving the way for a new era of connected devices.",
+    content: "...",
+    author: "Don Cheadle",
+    publishedAt: "2025-06-19T17:00:00Z",
+    category: "OPINION",
+    imageUrl: "/t4.avif",
+    readTime: "4 min read",
+  },
+  {
+    id: "tech-4",
+    title: "Ethical AI Framework Proposed by Tech Leaders and Academics",
+    excerpt:
+      "A new framework aims to ensure that artificial intelligence is developed and used responsibly.",
+    content: "...",
+    author: "Benedict Cumber",
+    publishedAt: "2025-06-18T13:00:00Z",
+    category: "OPINION",
+    imageUrl: "/t5.jfif",
+    readTime: "4 min read",
+  },
+  {
+    id: "tech-5",
+    title: "The Metaverse: Hype vs. Reality for the Future of the Internet",
+    excerpt:
+      "Experts debate the long-term viability and societal impact of the much-hyped metaverse.",
+    content: "...",
+    author: "Zoe Saldana",
+    publishedAt: "2025-06-17T16:00:00Z",
+    category: "OPINION",
+    imageUrl: "/t6.avif",
+    readTime: "5 min read",
+  },
+  {
+    id: "tech-6",
+    title: "Cybersecurity Threats Evolve with AI-Powered Attacks",
+    excerpt:
+      "Security experts are warning of a new wave of sophisticated cybersecurity threats powered by artificial intelligence.",
+    content: "...",
+    author: "Tom Holland",
+    publishedAt: "2025-06-16T14:00:00Z",
+    category: "OPINION",
+    imageUrl: "/t7.jfif",
     readTime: "4 min read",
   },
 ];
