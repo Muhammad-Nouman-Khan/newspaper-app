@@ -27,7 +27,7 @@
           />
         </div>
         <div class="flex flex-col flex-1 items-center justify-center">
-          <h1 class="text-2xl font-bold">Daily Herald</h1>
+          <h1 class="text-2xl font-bold heading">Daily Herald</h1>
           <p class="text-sm text-base-content/80">
             TRUSTED NEWS • GLOBAL PERSPECTIVE
           </p>
