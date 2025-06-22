@@ -3,6 +3,7 @@
     <Header />
     <main>
       <HeroSection />
+      <MoreStories />
       <slot />
     </main>
   </div>

@@ -140,3 +140,91 @@ export const latestNews: NewsArticle[] = [
     readTime: "2 min read",
   },
 ];
+
+export const moreStories: NewsArticle[] = [
+  {
+    id: "more-1",
+    title: "Senate Approves Comprehensive Healthcare Reform Package",
+    excerpt:
+      "Bipartisan legislation aims to expand coverage and reduce prescription drug costs for millions of Americans.",
+    content:
+      "The Senate has passed a landmark healthcare reform package that represents the most significant changes to the American healthcare system in over a decade. The bipartisan legislation, which received support from both major political parties, includes provisions to expand healthcare coverage, reduce prescription drug costs, and improve access to mental health services.\n\nThe bill includes measures to cap out-of-pocket costs for prescription drugs, expand Medicaid coverage in states that haven't already done so, and provide subsidies to help middle-income families afford health insurance. Healthcare advocates have praised the legislation for addressing long-standing issues in the American healthcare system.\n\nHowever, some critics argue that the reforms don't go far enough in addressing the root causes of high healthcare costs. The bill now moves to the House of Representatives for consideration.",
+    author: "Elizabeth Washington",
+    publishedAt: "2025-01-21T22:15:00Z",
+    category: "POLITICS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "more-2",
+    title:
+      "International Space Station Celebrates 25 Years of Scientific Discovery",
+    excerpt:
+      "Milestone anniversary marks decades of groundbreaking research and international cooperation in space exploration.",
+    content:
+      "The International Space Station (ISS) is celebrating its 25th anniversary, marking a quarter-century of unprecedented scientific discovery and international cooperation in space exploration. Since its first module was launched in 1998, the ISS has hosted over 250 astronauts from 20 different countries and conducted thousands of experiments that have advanced our understanding of space, Earth, and human biology.\n\nThe station has been instrumental in developing technologies for long-duration spaceflight, studying the effects of microgravity on the human body, and conducting research that has led to breakthroughs in medicine, materials science, and environmental monitoring. Scientists have used the unique microgravity environment to develop new cancer treatments, study protein crystallization, and test advanced life support systems.\n\nNASA and its international partners are planning to extend the ISS's operational life through 2030, with plans to transition to commercial space stations in the future. The station continues to serve as a symbol of what humanity can achieve through international collaboration.",
+    author: "Dr. James Chen",
+    publishedAt: "2025-01-21T21:30:00Z",
+    category: "WORLD",
+    imageUrl:
+      "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&h=400&fit=crop",
+    readTime: "5 min read",
+  },
+  {
+    id: "more-3",
+    title: "Major Bank Announces Revolutionary Digital Banking Platform",
+    excerpt:
+      "New AI-powered system promises to transform personal finance management with predictive analytics and automated savings.",
+    content:
+      "One of the nation's largest banks has unveiled a revolutionary digital banking platform that leverages artificial intelligence to provide personalized financial services. The new system, which will be rolled out to customers over the next six months, includes features like predictive spending analysis, automated savings recommendations, and real-time fraud detection.\n\nThe platform uses machine learning algorithms to analyze spending patterns and provide personalized financial advice. It can automatically categorize expenses, identify potential savings opportunities, and alert users to unusual account activity. The system also includes advanced budgeting tools that help users set and achieve financial goals.\n\nPrivacy advocates have raised concerns about the amount of personal financial data being analyzed, but the bank has assured customers that all data is encrypted and protected by strict privacy controls. The platform represents a significant step forward in the digital transformation of banking services.",
+    author: "Rachel Kim",
+    publishedAt: "2025-01-21T20:45:00Z",
+    category: "BUSINESS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+    readTime: "3 min read",
+  },
+  {
+    id: "more-4",
+    title: "Quantum Computing Breakthrough Achieves Quantum Supremacy",
+    excerpt:
+      "Scientists solve complex mathematical problem in minutes that would take traditional computers thousands of years.",
+    content:
+      "A team of researchers has achieved a major breakthrough in quantum computing, successfully demonstrating quantum supremacy by solving a complex mathematical problem that would take the world's most powerful supercomputers thousands of years to complete. The quantum computer completed the calculation in just 200 seconds, marking a significant milestone in the development of quantum technology.\n\nThe achievement involved a 53-qubit quantum processor that was able to perform a specific calculation with unprecedented speed and accuracy. This demonstration of quantum supremacy opens up new possibilities for solving complex problems in fields like cryptography, drug discovery, and climate modeling.\n\nWhile the current quantum computer is designed for this specific type of calculation, researchers believe this breakthrough will accelerate the development of more general-purpose quantum computers. The technology could eventually revolutionize fields ranging from artificial intelligence to materials science.",
+    author: "Dr. Sarah Zhang",
+    publishedAt: "2025-01-21T19:20:00Z",
+    category: "TECHNOLOGY",
+    imageUrl:
+      "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    id: "more-5",
+    title: "Olympic Athlete Breaks World Record in Stunning Performance",
+    excerpt:
+      "Record-breaking run in the 100-meter dash sets new standard for human athletic achievement.",
+    content:
+      "In a performance that has stunned the sports world, an Olympic athlete has shattered the world record in the 100-meter dash, completing the race in an astonishing 9.45 seconds. The previous record, which had stood for over a decade, was broken by a margin that experts had previously thought impossible.\n\nThe athlete, who has been training for this moment for years, credited a combination of advanced training techniques, improved nutrition, and mental preparation for the breakthrough performance. Sports scientists are studying the race footage to understand what made this performance so exceptional.\n\nThe record-breaking run has sparked discussions about the limits of human athletic performance and whether this new standard can ever be surpassed. The athlete has become an instant global sensation, with millions of people around the world watching replays of the historic race.",
+    author: "Marcus Johnson",
+    publishedAt: "2025-01-21T18:10:00Z",
+    category: "SPORTS",
+    imageUrl:
+      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXRobGV0ZXxlbnwwfHwwfHx8MA%3D%3D",
+    readTime: "3 min read",
+  },
+  {
+    id: "more-6",
+    title: "Award-Winning Film Director Announces Ambitious New Project",
+    excerpt:
+      "Multi-million dollar production will explore themes of identity and belonging in the digital age.",
+    content:
+      "An acclaimed film director has announced plans for an ambitious new project that promises to push the boundaries of cinematic storytelling. The multi-million dollar production, which will begin filming next year, will explore themes of identity, belonging, and human connection in an increasingly digital world.\n\nThe film, which has already attracted interest from major studios and streaming platforms, will feature an international cast and be shot in multiple countries. The director has described it as a 'love letter to humanity' that will challenge audiences to think about what it means to be human in the 21st century.\n\nThe project represents a significant departure from the director's previous work and has generated considerable buzz in the entertainment industry. Early concept art and storyboards have been praised for their innovative approach to visual storytelling.",
+    author: "Isabella Rodriguez",
+    publishedAt: "2025-01-21T17:30:00Z",
+    category: "CULTURE",
+    imageUrl:
+      "https://images.unsplash.com/photo-1578269174936-2709b6aeb913?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXdhcmR8ZW58MHx8MHx8fDA%3D",
+    readTime: "4 min read",
+  },
+];
