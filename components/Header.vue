@@ -72,7 +72,49 @@
         </div>
       </div>
     </div>
+    <div class="hidden md:flex border-b border-base-300 h-10">
+      <div class="container mx-auto flex items-center justify-center">
+        <nav class="flex items-center space-x-8">
+          <a
+            v-for="item in navigationItems"
+            :key="item"
+            :href="getNavLink(item)"
+            :class="[
+              'text-sm font-medium transition-colors duration-200',
+              isActive(item)
+                ? 'text-primary border-b-2 border-primary'
+                : 'text-base-content hover:text-primary',
+            ]"
+          >
+            {{ item }}
+          </a>
+        </nav>
+      </div>
+    </div>
   </header>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const route = useRoute();
+const navigationItems = [
+  "HOME",
+  "POLITICS",
+  "WORLD",
+  "BUSINESS",
+  "TECHNOLOGY",
+  "SPORTS",
+  "CULTURE",
+  "OPINION",
+];
+
+const getNavLink = (item: string) => {
+  return item === "HOME" ? "/" : `${item.toLocaleLowerCase()}`;
+};
+
+const isActive = (item: string) => {
+  if (item === "HOME") {
+    return route.path === "/";
+  }
+  return route.path === `/${item.toLocaleLowerCase()}`;
+};
+</script>
