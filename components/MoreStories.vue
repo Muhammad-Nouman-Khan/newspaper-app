@@ -12,6 +12,7 @@
         v-for="story in moreStories"
         :key="story.id"
         class="group cursor-pointer bg-base-100 rounded-xl shadow-lg border border-base-300 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+        @click="openDialog(story)"
       >
         <div class="relative overflow-hidden">
           <img
@@ -52,10 +53,19 @@
         </div>
       </article>
     </div>
+    <NewsDialog :news="selectedNews" @close="selectedNews = null" />
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import { moreStories } from "~/data/news";
 import { formatDate } from "~/utils/dateFormatter";
+import NewsDialog from "./NewsDialog.vue";
+import type { NewsArticle } from "~/data/news";
+
+const selectedNews = ref<NewsArticle | null>(null);
+const openDialog = (news: NewsArticle) => {
+  selectedNews.value = news;
+};
 </script>

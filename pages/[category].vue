@@ -14,6 +14,7 @@
         v-for="story in articles"
         :key="story.id"
         class="group cursor-pointer bg-base-100 rounded-xl shadow-lg border border-base-300 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+        @click="openDialog(story)"
       >
         <div class="relative overflow-hidden">
           <img
@@ -63,11 +64,12 @@
         Please check back later or explore other sections.
       </p>
     </div>
+    <NewsDialog :news="selectedNews" @close="selectedNews = null" />
   </main>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
 import type { NewsArticle } from "~/data/news";
 import {
@@ -79,6 +81,7 @@ import {
   cultureNews,
 } from "~/data/news";
 import { formatDate } from "~/utils/dateFormatter";
+import NewsDialog from "~/components/NewsDialog.vue";
 
 const route = useRoute();
 const category = computed(() => route.params.category as string);
@@ -101,4 +104,9 @@ const articles = computed<NewsArticle[]>(() => {
       return [];
   }
 });
+
+const selectedNews = ref<NewsArticle | null>(null);
+const openDialog = (news: NewsArticle) => {
+  selectedNews.value = news;
+};
 </script>
