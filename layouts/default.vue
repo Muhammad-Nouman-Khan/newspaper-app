@@ -3,7 +3,9 @@
     <Header />
     <main>
       <HeroSection />
-      <MoreStories />
+      <div class="bg-base-200">
+        <MoreStories />
+      </div>
       <slot />
     </main>
   </div>

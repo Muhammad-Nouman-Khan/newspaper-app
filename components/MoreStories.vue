@@ -1,10 +1,13 @@
 <template>
   <section class="container mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold text-base-content mb-8 text-center heading">
-      More Stories
-    </h2>
+    <div>
+      <h2 class="text-3xl font-bold text-base-content mb-8 heading">
+        More Stories
+      </h2>
+      <div class="border-2 border-primary -mt-7 w-12" />
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-5">
       <article
         v-for="story in moreStories"
         :key="story.id"
