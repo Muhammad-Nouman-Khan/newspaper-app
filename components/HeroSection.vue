@@ -87,7 +87,7 @@
                   </div>
 
                   <h3
-                    class="text-sm font-semibold text-base-content leading-tight group-hover:text-primary transition-colors duration-200"
+                    class="text-sm font-semibold text-base-content leading-tight group-hover:text-primary transition-colors duration-200 heading"
                   >
                     {{ news.title }}
                   </h3>

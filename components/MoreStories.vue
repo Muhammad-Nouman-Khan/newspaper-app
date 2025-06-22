@@ -30,7 +30,7 @@
 
         <div class="p-6 space-y-4">
           <h3
-            class="text-xl font-bold text-base-content leading-tight group-hover:text-primary transition-colors duration-200"
+            class="text-xl font-bold text-base-content leading-tight group-hover:text-primary transition-colors duration-200 heading"
           >
             {{ story.title }}
           </h3>
