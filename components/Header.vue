@@ -50,9 +50,9 @@
         <div
           class="flex flex-col flex-1 items-center justify-center lg:items-start"
         >
-          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold heading">
+          <NuxtLink to="/" class="text-2xl md:text-3xl lg:text-4xl font-bold heading">
             NuxtNews
-          </h1>
+          </NuxtLink>
           <p class="text-sm lg:text-lg text-base-content/80">
             TRUSTED NEWS • GLOBAL PERSPECTIVE
           </p>

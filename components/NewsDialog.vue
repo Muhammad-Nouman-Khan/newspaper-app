@@ -8,7 +8,7 @@
     >
       <button
         @click="$emit('close')"
-        class="absolute top-4 right-4 btn btn-sm btn-circle btn-ghost z-10 bg-white"
+        class="fixed top-4 right-4 btn btn-sm btn-circle btn-ghost z-10 bg-white"
       >
         ✕
       </button>
