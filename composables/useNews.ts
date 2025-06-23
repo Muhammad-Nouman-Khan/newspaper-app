@@ -108,11 +108,21 @@ export const useNews = () => {
         (article) => article.id === id
       );
       if (index !== -1) {
-        categoryArray.value[index] = {
-          ...categoryArray.value[index],
-          ...updatedArticle,
-        };
-        return true;
+        if (categoryArray.value[index].category === updatedArticle.category) {
+          categoryArray.value[index] = {
+            ...categoryArray.value[index],
+            ...updatedArticle,
+          };
+          return true;
+        } else {
+          // If the category has changed, remove from old category and add to new one
+          const oldCategory = categoryArray.value[index].category;
+          categoryArray.value.splice(index, 1);
+          updatedArticle.id = id; // Ensure the ID remains the same
+          updatedArticle.category = updatedArticle.category || oldCategory; // Use old category if not provided
+          addArticle(updatedArticle as Omit<NewsArticle, "id">);
+          return true;
+        }
       }
       return false;
     };
