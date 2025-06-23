@@ -8,8 +8,8 @@
           <form @submit.prevent="handleLogin">
             <div class="space-y-4">
               <div class="text-center lg:text-left mb-6">
-                <h1 class="text-3xl font-bold heading mb-2">NuxtNews</h1>
-                <p class="text-sm opacity-70">
+                <h1 class="text-5xl !font-bold heading mb-2">NuxtNews</h1>
+                <p class="text-sm opacity-70 italic">
                   Sign in to your account to continue.
                 </p>
               </div>
@@ -23,6 +23,7 @@
                     type="email"
                     placeholder="hello@example.com"
                     class="input input-bordered w-full"
+                    required
                   />
                 </div>
                 <div class="form-control w-full space-y-2">
@@ -43,9 +44,9 @@
                 <div class="text-center mt-4">
                   <p class="text-sm">
                     Don't have an account?
-                    <NuxtLink to="/" class="text-primary hover:underline">
+                    <span to="/" class="text-primary hover:underline cursor-pointer">
                       Create one
-                    </NuxtLink>
+                    </span>
                   </p>
                 </div>
               </div>
